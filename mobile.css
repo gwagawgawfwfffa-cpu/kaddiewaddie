@@ -1,0 +1,64 @@
+/* Confirmation keeps the button in one position between the two taps. */
+#start-trip{min-width:270px;max-width:100%;min-height:50px}
+.prologue-bottom .trip-confirmation{font:20px/1.35 var(--hand);min-height:2.7em;max-width:340px;margin:12px auto 0;color:var(--muted)}
+#start-trip.trip-is-ready{background:var(--berry-dark);border-color:var(--berry-dark)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+dialog{max-height:88vh;max-height:88dvh;overscroll-behavior:contain}
+.letter-copy,.reason-text,.closing-text{overflow-wrap:break-word}
+.site-footer{flex-wrap:wrap}
+.music-player{-webkit-backdrop-filter:blur(10px)}
+.has-music-player{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+.music-player{bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+
+@media(pointer:coarse) and (max-width:1000px){
+  .letter-copy,.reason-text,.closing-text{font-size:16px;line-height:1.85}
+  .primary-button,.secondary-button,.text-button,.keep-heart,.music-toggle,.music-next,.close-dialog,.map-number{min-height:44px}
+  .music-toggle,.music-next,.close-dialog{min-width:44px}
+}
+
+@media(max-width:600px){
+  .hero-copy h1{font-size:clamp(35px,10.8vw,58px)}
+  .hero-copy h1 em{white-space:normal}
+  .hero-description{font-size:15px;line-height:1.75}
+  .letter-copy,.reason-text,.closing-text{font-size:16px;line-height:1.85}
+  .primary-button,.secondary-button{min-height:48px;font-size:12px}
+  .text-button,.wordmark{min-height:44px}
+  #start-trip{width:100%;min-width:0;max-width:340px;padding:14px 16px;gap:12px}
+  .prologue-bottom .trip-confirmation{font-size:21px}
+  .reason-bottom{flex-wrap:wrap;justify-content:space-between;gap:12px}
+  .reason-bottom>span{font-size:18px;max-width:145px}
+  .keep-heart{min-height:44px;font-size:11px;padding:10px 12px}
+  .journey-controls{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 10px}
+  .journey-controls .primary-button{width:100%;min-width:0;padding:13px 10px;font-size:12px;gap:8px}
+  .journey-controls .primary-button svg{flex-shrink:0}
+  .journey-controls .secondary-button{font-size:12px;padding:13px 10px}
+  .progress-wrap{grid-column:1/-1;min-width:0}
+  .close-dialog{width:44px;height:44px;flex-shrink:0}
+  dialog{max-height:88vh;max-height:88dvh}
+  .map-numbers{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;width:100%}
+  .map-number{width:100%;min-height:44px;font-size:12px;border-radius:12px}
+  .map-footer .text-button{font-size:12px}
+  .has-music-player{padding-bottom:calc(108px + env(safe-area-inset-bottom,0px))}
+  .music-player{display:grid;grid-template-columns:44px minmax(0,1fr) 44px 54px;gap:6px;width:calc(100% - 24px);max-width:430px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));border-radius:22px;padding:8px}
+  .music-toggle,.music-next{width:44px;height:44px;min-height:44px;padding:0}
+  .music-info{min-width:0;max-width:none}
+  .music-info>span{font-size:12px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;max-height:2.6em;line-height:1.3}
+  .music-info>small{font-size:10px;line-height:1.3}
+  .music-volume-label{min-width:0;min-height:44px}
+  #music-volume{width:100%;min-width:0;height:44px}
+  .finale .primary-button{max-width:100%;font-size:12px;gap:10px}
+  .finale .primary-button svg{flex-shrink:0}
+}
+@media(max-width:380px){
+  .map-numbers{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .letter-paper{padding:28px 19px 20px}
+  .reason-paper{padding:28px 20px 23px}
+  .reason-bottom{justify-content:flex-start}
+  .music-player{grid-template-columns:44px minmax(0,1fr) 44px 46px}
+  .finale h1{font-size:35px}
+}
+@media(max-height:500px) and (orientation:landscape){
+  dialog{max-height:90vh;max-height:90dvh}
+  .prologue,.journey,.finale{margin-top:10px}
+}
